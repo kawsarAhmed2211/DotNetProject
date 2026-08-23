@@ -1,1 +1,103 @@
+#
 GET http://localhost:5216/games
+
+##
+GET http://localhost:5216/games/2
+
+###
+POST http://localhost:5216/games
+Content-Type: application/json
+
+{
+    "name": "Game 8",
+    "genre": "Action",
+    "price": 59.99,
+    "releaseDate": "2023-01-01"
+}
+
+//In a .http file, you need a blank line between the headers and the body.
+
+You currently have:
+
+POST http://localhost:5216/games 
+Content-Type: application/json 
+{ 
+    "name": "Game 8", 
+    "genre": "Action", 
+    "price": 59.99, 
+    "releaseDate": "2023-01-01" 
+}
+
+# //Because there's no blank line after Content-Type, the HTTP client thinks this:
+
+# //{
+
+# is another HTTP header.
+
+# That's why you're getting:
+
+# Header name must be a valid HTTP token ["{"]
+
+# Fix it like this
+# ### 
+# POST http://localhost:5216/games
+# Content-Type: application/json
+
+# {
+#     "name": "Game 8",
+#     "genre": "Action",
+#     "price": 59.99,
+#     "releaseDate": "2023-01-01"
+# }
+
+# Notice the empty line here:
+
+# Content-Type: application/json
+#                                 ← blank line
+# {
+
+# Then click Send Request above the POST.
+
+# What happens next
+
+# Your C# endpoint receives:
+
+# {
+#     "name": "Game 8",
+#     "genre": "Action",
+#     "price": 59.99,
+#     "releaseDate": "2023-01-01"
+# }
+
+# It puts that into:
+
+# CreateGameDtos newGame
+
+# Then creates:
+
+# GameDtos game = new (
+#     games.Count + 1,
+#     newGame.Name,
+#     newGame.Genre,
+#     newGame.Price,
+#     newGame.ReleaseDate
+# );
+
+# And finally:
+
+# games.Add(game);
+
+# So Game 8 gets added to your games list.
+
+# One more thing: if you don't get a response after fixing this, that's because your current MapPost doesn't return anything. That's normal for now, but we can add a proper 201 Created response next.
+
+####
+PUT http://localhost:5216/games/6
+Content-Type: application/json
+
+{
+    "name": "Red Dead Redemption",
+    "genre": "Action-adventure",
+    "price": 59.99,
+    "releaseDate": "2018-10-26"
+}
