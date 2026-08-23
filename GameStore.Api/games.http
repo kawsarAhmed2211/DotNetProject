@@ -1,8 +1,8 @@
 #
-GET http://localhost:5216/games
+GET http://localhost:5216/games/8
 
 ##
-GET http://localhost:5216/games/2
+# GET http://localhost:5216/games/2
 
 ###
 POST http://localhost:5216/games
@@ -17,10 +17,11 @@ Content-Type: application/json
 
 //In a .http file, you need a blank line between the headers and the body.
 
-You currently have:
+# You currently have:
 
 POST http://localhost:5216/games 
 Content-Type: application/json 
+
 { 
     "name": "Game 8", 
     "genre": "Action", 
@@ -96,8 +97,11 @@ PUT http://localhost:5216/games/6
 Content-Type: application/json
 
 {
-    "name": "Red Dead Redemption",
+    "name": "Red  Redemption",
     "genre": "Action-adventure",
     "price": 59.99,
     "releaseDate": "2018-10-26"
 }
+
+#####
+DELETE http://localhost:5216/games/6

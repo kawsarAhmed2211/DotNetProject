@@ -22,9 +22,16 @@ app.MapGet("/games", () => games);
 
 
 //Get games by id 
-app.MapGet("/games/{id}", (int id) =>
-    games.Find(game => game.Id == id)
-).WithName(GetGameEndPointName);
+app.MapGet("/games/{id}", (int id) =>{
+    var game = games.Find(game => game.Id == id);
+    /*if (game == null)
+    {
+        return Results.NotFound();
+    }
+    return Results.Ok(game);*/
+    return game is  null ? Results.NotFound() : Results.Ok(game);
+}).WithName(GetGameEndPointName);
+
 
 //POST a game
 app.MapPost("/games", (CreateGameDtos newGame) =>
@@ -61,6 +68,22 @@ app.MapPut("/games/{id}", (int id, UpdateGameDtos updatedGame) =>
 
     return Results.NoContent();
 });
+
+// DELETE /games/id
+app.MapDelete("/games/{id}", (int id) =>
+{
+    var index = games.FindIndex(game => game.Id == id);
+
+    if (index == -1)
+    {
+        return Results.NotFound();
+    }
+
+    games.RemoveAt(index);
+
+    return Results.NoContent();
+});
+
 
 // for creating any endpoints you need to create a file for example /games you need an endpoint with /games
 app.Run();
