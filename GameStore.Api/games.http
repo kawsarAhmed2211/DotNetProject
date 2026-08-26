@@ -97,7 +97,7 @@ PUT http://localhost:5216/games/2
 Content-Type: application/json
 
 {
-    "name": "Red ",
+    "name": " ",
     "genre": "Action-adventure",
     "price": 59.99,
     "releaseDate": "2018-10-26"
