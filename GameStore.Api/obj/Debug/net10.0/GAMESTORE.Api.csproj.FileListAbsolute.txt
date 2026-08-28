@@ -26,7 +26,6 @@ D:\Users\ahmed\Documents\DotNet Project\GameStore.Api\obj\Debug\net10.0\refint\G
 D:\Users\ahmed\Documents\DotNet Project\GameStore.Api\obj\Debug\net10.0\GAMESTORE.Api.pdb
 D:\Users\ahmed\Documents\DotNet Project\GameStore.Api\obj\Debug\net10.0\GAMESTORE.Api.genruntimeconfig.cache
 D:\Users\ahmed\Documents\DotNet Project\GameStore.Api\obj\Debug\net10.0\ref\GAMESTORE.Api.dll
-D:\Users\ahmed\Documents\DotNet Project\GameStore.Api\obj\Debug\net10.0\GAMESTORE.Api.sourcelink.json
 D:\Users\ahmed\Documents\DotNet Project\GameStore.Api\bin\Debug\net10.0\Microsoft.Data.Sqlite.dll
 D:\Users\ahmed\Documents\DotNet Project\GameStore.Api\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
 D:\Users\ahmed\Documents\DotNet Project\GameStore.Api\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll

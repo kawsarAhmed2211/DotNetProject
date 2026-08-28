@@ -10,7 +10,7 @@ Content-Type: application/json
 
 {
     "name": "One or mo",
-    "genre": "",
+    "genreId": "3",
     "price": 559.99,
     "releaseDate": "2023-01-01"
 }
