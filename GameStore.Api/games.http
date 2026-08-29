@@ -2,16 +2,16 @@
 GET http://localhost:5216/games
 
 ##
-# GET http://localhost:5216/games/2
+GET http://localhost:5216/games/2
 
 ###
 POST http://localhost:5216/games
 Content-Type: application/json
 
 {
-    "name": "One or mo",
-    "genreId": "3",
-    "price": 559.99,
+    "name": "Street Fighter II",
+    "genreId": "1",
+    "price": 9.99,
     "releaseDate": "2023-01-01"
 }
 
@@ -93,12 +93,12 @@ Content-Type: application/json
 # One more thing: if you don't get a response after fixing this, that's because your current MapPost doesn't return anything. That's normal for now, but we can add a proper 201 Created response next.
 
 ####
-PUT http://localhost:5216/games/2
+PUT http://localhost:5216/games/1
 Content-Type: application/json
 
 {
-    "name": " ",
-    "genre": "Action-adventure",
+    "name": "Street Fighter I",
+    "genreId": 1,
     "price": 59.99,
     "releaseDate": "2018-10-26"
 }

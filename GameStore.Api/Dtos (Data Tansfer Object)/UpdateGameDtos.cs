@@ -9,8 +9,8 @@ public record UpdateGameDtos
     string Name,
 
     [Required(AllowEmptyStrings = false)]
-    [StringLength(50)]
-    string Genre,
+    [Range(1,50)]
+    int GenreId,
 
     [Range(1,100) ]decimal Price,
     [Required ]DateOnly ReleaseDate
