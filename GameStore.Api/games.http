@@ -104,4 +104,7 @@ Content-Type: application/json
 }
 
 #####
-DELETE http://localhost:5216/games/8
+DELETE http://localhost:5216/games/2
+
+######
+GET http://localhost:5216/genres

@@ -30,6 +30,8 @@ var app = builder.Build();
 
 app.MapGamesEndpoints();
 
+app.MapGenresEndpoints();
+
 app.MigrateDb();
 // for creating any endpoints you need to create a file for example /games you need an endpoint with /games
 app.Run();
